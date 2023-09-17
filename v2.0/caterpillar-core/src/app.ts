@@ -57,7 +57,7 @@ mongoose.connect('mongodb://localhost:27017/caterpillarRepo', function(error){
    if(error){
       throw error;
    }else{
-      console.log('Conectado a MongoDB');
+      console.log('Connecté à la base de données Mongo DB');
    }
 });
 

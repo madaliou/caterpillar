@@ -56,5 +56,9 @@
     "nodemon": "^1.11.0",
     "typescript": "^2.6.2",
     "xml2js": "^0.4.19"
-  }
+  },
+  "resolutions": {
+      "graceful-fs": "^4.2.11"
+    }
+  
 }

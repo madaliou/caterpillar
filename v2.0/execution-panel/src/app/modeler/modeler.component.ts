@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { Http } from "@angular/http";
 import * as Modeler from "bpmn-js/lib/Modeler.js";
 import * as propertiesPanelModule from "bpmn-js-properties-panel";
-import * as propertiesProviderModule from "bpmn-js-properties-panel/lib/provider/bpmn";
+import * as propertiesProviderModule from "bpmn-js-properties-panel";
 import { ProcessStorage } from "app/data-store/data-store";
 
 import { PaletteProvider } from "./palette";
