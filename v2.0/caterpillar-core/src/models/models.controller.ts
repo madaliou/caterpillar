@@ -141,8 +141,11 @@ models.get('/models', (req, res) => {
 models.post('/models', (req, res) => {
     console.log('DEPLOYING MODEL ...');
     let modelInfo: ModelInfo = req.body as ModelInfo;
+    console.log('mes paramètres ... : ', modelInfo);
+
     try {
         let cont = parseModel(modelInfo);
+        
         cont.then(() => {
 
             let input = {
@@ -164,7 +167,7 @@ models.post('/models', (req, res) => {
             let output = solc.compile({sources: input}, 1);
             if (Object.keys(output.contracts).length === 0) {
                 res.status(400).send('COMPILATION ERROR IN SMART CONTRACTS');
-                console.log('COMPILATION ERROR IN SMART CONTRACTS');
+                console.log('COMPILATION ERROR IN SMART CONTRACTS------');
                 console.log(output.errors);
                 console.log('----------------------------------------------------------------------------------------------');
                 return;
@@ -201,6 +204,7 @@ models.post('/models', (req, res) => {
                         }
                     });
             } else {
+                
                 registerModel(modelInfo, output.contracts, res);
             }
         })

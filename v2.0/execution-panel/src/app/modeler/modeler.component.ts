@@ -82,6 +82,8 @@ export class ModelerComponent implements OnInit {
             this.goToDashborad();
             this.processStorage.modelId = this.modeler.definitions.rootElements[i].id;
             this.processStorage.registerModel(xml);
+            console.log('I am here');
+
             this.modelText =
               'Working in Model Registration. Please, take into account that this may require some seconds.';
           }

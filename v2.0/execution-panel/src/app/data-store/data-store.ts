@@ -23,6 +23,8 @@ export class ProcessStorage {
       .subscribe(
         (resp) => {
         const res = resp.json();
+        console.log('la reponse après le post est ceci : ', res);
+
         if (res.id && res.bpmn && res.solidity && this.processes.indexOf(res) < 0) {
           this.searchRegisteredModel('');
           console.log('Model ' + res.name + ' succesfully registered');
